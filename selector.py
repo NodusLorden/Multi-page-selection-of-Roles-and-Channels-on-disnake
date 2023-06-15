@@ -43,7 +43,7 @@ def create_selection_component(custom_id: str, items: list, page: int):
 
 
 @bot.slash_command(name="choose_role")
-async def test(inter: disnake.ApplicationCommandInteraction):
+async def choose_role(inter: disnake.ApplicationCommandInteraction):
     roles = inter.guild.roles
 
     await inter.response.send_message(
@@ -55,7 +55,7 @@ async def test(inter: disnake.ApplicationCommandInteraction):
 
 
 @bot.slash_command(name="choose_text_channel")
-async def test(inter: disnake.ApplicationCommandInteraction):
+async def choose_text_channel(inter: disnake.ApplicationCommandInteraction):
     channels = inter.guild.text_channels
 
     await inter.response.send_message(
