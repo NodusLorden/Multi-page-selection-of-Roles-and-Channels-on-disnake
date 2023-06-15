@@ -47,7 +47,7 @@ async def choose_role(inter: disnake.ApplicationCommandInteraction):
     roles = inter.guild.roles
 
     await inter.response.send_message(
-        content="Страница: 1",
+        content="Page: 1",
         ephemeral=True,
         delete_after=60,
         components=create_selection_component("select", roles, 0)
@@ -59,7 +59,7 @@ async def choose_text_channel(inter: disnake.ApplicationCommandInteraction):
     channels = inter.guild.text_channels
 
     await inter.response.send_message(
-        content="Страница: 1",
+        content="Page: 1",
         ephemeral=True,
         delete_after=60,
         components=create_selection_component("select", channels, 0)
